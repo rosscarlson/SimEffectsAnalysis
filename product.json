@@ -2,13 +2,22 @@
   "_about": "SimEffects Analysis: an app of its own made from Daisy's App's program (rosscarlson/DaisysApp, at the commit in daisysapp.ref) with only these modules, laid out as below. Daisy's App's build.ps1 -Product <this folder> builds it (build.ps1 here does that). Raise Version only for its own release; tag v<Version> to release it. Never change Guid (its installer's AppId) or Name (its program's, settings' and installer's name).",
   "Name": "SimEffectsAnalysis",
   "Title": "SimEffects Analysis",
-  "Version": "0.2.1",
+  "Version": "0.3.0",
   "TagPrefix": "v",
   "Repo": "rosscarlson/SimEffectsAnalysis",
   "Guid": "833000FE-ECB2-414D-B60D-7E7B95D9F0BE",
   "Modules": [ "SimEffects", "Video" ],
-  "Tabs": [ "SimEffects/Analysis", "SimEffects/InputOverlay", "Video/Recording" ],
+  "Tabs": [ "SimEffects/Analysis", "Video/Recording", "SimEffects/InputOverlay" ],
   "Hidden": [ "SimEffects/Profiles", "Video/Gaming" ],
   "Game": "ForzaHorizon",
-  "Hide": [ "SimEffects/Analysis/KnownTracks", "SimEffects/Analysis/CurrentLocation" ]
+  "Hide": [ "SimEffects/Analysis/KnownTracks", "SimEffects/Analysis/CurrentLocation", "SimEffects/Analysis/ShareAccount", "SimEffects/Analysis/SharePort",
+            "Video/Recording/Benchmark", "Video/Recording/History" ],
+  "Ask": [ "SimEffects/Analysis/Account" ],
+  "Settings": [
+    [ [ "Startup" ], [ "Updates" ] ],
+    [ [ "SimEffects/Analysis/Account" ], [ "Appearance" ], [ "Notifications" ], [ "Language" ] ],
+    [ [ "Video/Recording" ], [ "SimEffects/Analysis", "YouTube" ] ],
+    [ [ "Shortcuts" ] ],
+    [ [ "Files" ] ]
+  ]
 }

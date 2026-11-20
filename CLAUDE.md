@@ -31,9 +31,9 @@ release workflow.
 1. `product.json` Version raised; CHANGELOG's **Next** renamed to it; `daisysapp.ref` = the Daisy's App commit
    (on its origin/main); commit and push here.
 2. `git tag v<Version>; git push origin v<Version>`; `gh run watch` the Release run; give the user the release link.
-3. **0.2.2 only (the bridge):** 0.2.0–0.2.1 read Daisy's App's repository (tags `sea-v*`), so put the same installer
-   there too: `gh release create sea-v0.2.2 <exe> -R rosscarlson/DaisysApp --latest=false --title "SimEffects Analysis
-   0.2.2" --notes "..."`. From 0.2.2 on it reads only this repository (app.json `Repo`). Drop this step after.
+3. **The bridge (done at 0.3.0):** 0.2.0–0.2.1 read Daisy's App's repository (tags `sea-v*`), so 0.3.0's installer
+   is there too (`gh release create sea-v0.3.0 <exe> -R rosscarlson/DaisysApp --latest=false`). From 0.3.0 on it reads
+   only this repository (app.json `Repo`); repeat only if someone is still on 0.2.x.
 
 ## Session notes
 
@@ -46,9 +46,15 @@ release workflow.
 - **Moved here 2026-11-19** (the user: the layout will differ enough to keep apart; module code stays in Daisy's App).
   Daisy's App: `build.ps1 -Product <folder>`, app.json `Repo` read by `UpdateService.Releases`, `Hide` list
   (`ProductInfo.Hides`). Next release (0.2.2) has: no Known Tracks card, no Current Location (compass) button.
+- **0.3.0** (asked 2026-11-19): tabs Analysis | Recording | Overlays; Settings on one page (`Settings` key; the user's
+  order: Startup | Updates; ForzaLeaderBoard | Appearance | Notifications | Language; Recording | Analysis + YouTube;
+  Shortcuts and Files below, kept though not named); the ForzaLeaderBoard account card (Core `SettingsCards`, no Port:
+  `SharePort` hidden, the one set used), asked once on the first run (`Ask`, AnalysisSettings.AccountAsked); Share
+  Manager's Account button gone; no FPS overlay, tray items, benchmarks or history (`Hide`); Left Foot Braking on
+  by default (Daisy's App too, from its next release). The user wrote "forzaleaderboards.com": the built-in
+  www.forzaleaderboard.com kept.
 - **Decisions:** same program renamed, self-contained, modules beside it; virtual webcam left out (registered under
   Daisy's App's name and CLSID: two installs would break each other); settings `%APPDATA%\SimEffectsAnalysis`.
 - **To do / offered:** the `YOUTUBE_CLIENT` secret has to be added to this repo by the user (Daisy's App's has it; I
-  can't read it) or YouTube sign-in is off in builds. Offered: hiding Recording's Benchmark and History (no frames
-  counted without the Overlay's permission step); copying Daisy's App's laps over; code signing (Azure Trusted
-  Signing) for the SmartScreen warning. Not tried yet: an update from an installed copy (0.2.0 → 0.2.1 → 0.2.2).
+  can't read it) or YouTube sign-in is off in builds. Offered: copying Daisy's App's laps over; code signing (Azure Trusted
+  Signing) for the SmartScreen warning. Not tried yet: an update from an installed copy (0.2.1 → 0.3.0, through the bridge).

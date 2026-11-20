@@ -5,8 +5,16 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
-## Next
+## 0.3.0
 
+- Tabs in a new order: Analysis, Recording, Overlays, Settings.
+- Settings on one page, no sub-tabs: Startup and System Tray | Updates; ForzaLeaderBoard | Appearance | Notifications
+  | Language; Recording | Analysis with YouTube; Shortcuts; Files.
+- The ForzaLeaderBoard account (server, filled with www.forzaleaderboard.com; user; password; Sign in, Sign up) is on
+  Settings, and asked for once on the first run; Share Manager's Account button is gone.
+- YouTube's Sign In on Settings, under Analysis.
+- Recording only: no FPS overlay (nor its tray items or shortcuts), no Benchmark, no History; nothing is logged.
+- Left Foot Braking on by default.
 - Analysis without Known Tracks (Racing Statistics on its own) or the Current Location (compass) button.
 
 ## 0.2.1
