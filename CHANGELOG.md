@@ -5,6 +5,19 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
+## 0.3.3
+
+- Recording: Only the game's sound (on): Forza Horizon's sound without voice chat, videos or other programs.
+- Recording: A game or program first, set to Forza Horizon (any of its processes); then Display and Region. No
+  Performance card, no Camera button, no notes; Shape is Aspect Ratio.
+- Settings: Accounts (ForzaLeaderBoard and YouTube in one card) and General (Appearance, Notifications, Language).
+  ForzaLeaderBoard: one Sign In / Sign Out button, Sign Up a button shown only while signed out, signed in in green.
+- Settings → Recording: labels right up against their boxes, the boxes lined up; a quality profile's settings under
+  Edit, saved with Save (Daisy's App 4.18.12).
+- Forza Horizon Settings: no Short Name or Modules (Analysis and Overlays always start with it); a narrower box to
+  add a process.
+- Shortcuts in a card like the others, with none set to start (Daisy's App's Ctrl+Alt+F9 for Record taken off).
+
 ## 0.3.2
 
 - YouTube: Sign In with your Google account, no OAuth client ID or secret to fill in.

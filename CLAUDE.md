@@ -60,5 +60,10 @@ release workflow.
   Daisy's App's name and CLSID: two installs would break each other); settings `%APPDATA%\SimEffectsAnalysis`.
 - **0.3.2** (asked 2026-11-19): YouTube's client boxes gone (Core `YouTube.OwnClientOffered`: a product with the
   app's client uses only it); `YOUTUBE_CLIENT` set here from Daisy's App's installed exe's `YouTubeClient` metadata.
+- **0.3.3** (asked 2026-11-20): Recording's game-only sound (Video `ProcessAudio`, Windows' process loopback; tested:
+  activation and an audio track, not with Forza); Recording's game first (Core `ScreenRecordings.Game` from
+  SimEffects' profile, `GamingSettings.ProductGame`), `Hide` Performance / Cameras / Notes; Settings' `Title=A+B`
+  joined cards (Accounts, General); Shortcuts a card, none set (`ProductGameSet` cleared the defaults once).
+  The user saw YouTube's OAuth boxes in my test screenshot: local builds have no `YOUTUBE_CLIENT`; releases do.
 - **Offered:** copying Daisy's App's laps over; code signing (Azure Trusted
   Signing) for the SmartScreen warning. Not tried yet: an update from an installed copy (0.2.1 → 0.3.0, through the bridge).
