@@ -1,0 +1,69 @@
+# Push a tag v<Version> (product.json's) to build the installer from Daisy's App's source at the commit in
+# daisysapp.ref and publish this repository's release. Installed copies from 0.2.2 on read only this repository's
+# releases (app.json Repo).
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: app
+
+      - name: Version and Daisy's App's commit
+        id: product
+        shell: pwsh
+        run: |
+          $p = Get-Content app/product.json -Raw | ConvertFrom-Json
+          $v = '${{ github.ref_name }}'.Substring($p.TagPrefix.Length)
+          if ($v -ne $p.Version) { throw "${{ github.ref_name }} doesn't match product.json's version ($($p.Version))" }
+          "version=$v" >> $env:GITHUB_OUTPUT
+          "title=$($p.Title)" >> $env:GITHUB_OUTPUT
+          "name=$($p.Name)" >> $env:GITHUB_OUTPUT
+          "ref=$((Get-Content app/daisysapp.ref -Raw).Trim())" >> $env:GITHUB_OUTPUT
+
+      - uses: actions/checkout@v4
+        with:
+          repository: rosscarlson/DaisysApp
+          ref: ${{ steps.product.outputs.ref }}
+          path: daisysapp
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Install Inno Setup
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe")) { choco install innosetup -y --no-progress }
+
+      - name: Build installer
+        shell: pwsh
+        env:
+          # the Google OAuth client for YouTube's sign-in (Daisy's App's Core YouTube.AppClient), kept out of the source
+          YOUTUBE_CLIENT: ${{ secrets.YOUTUBE_CLIENT }}
+        run: ./daisysapp/build.ps1 -Product "$pwd/app" -Version '${{ steps.product.outputs.version }}'
+
+      - name: Publish release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $v = '${{ steps.product.outputs.version }}'
+          $setup = Get-Item "daisysapp/artifacts/${{ steps.product.outputs.name }}-Setup-$v.exe"
+          # the notes: this version's section of CHANGELOG.md
+          $log = Get-Content app/CHANGELOG.md -Raw
+          $m = [regex]::Match($log, '(?ms)^## ' + [regex]::Escape($v) + '\s*$(.*?)(?=^## |\z)')
+          $notes = if ($m.Success) { $m.Groups[1].Value.Trim() } else { "Version $v" }
+          Set-Content notes.md $notes -Encoding utf8
+          gh release view '${{ github.ref_name }}' -R '${{ github.repository }}' *> $null
+          if ($LASTEXITCODE -eq 0) { gh release upload '${{ github.ref_name }}' $setup.FullName --clobber -R '${{ github.repository }}' }
+          else { gh release create '${{ github.ref_name }}' $setup.FullName -R '${{ github.repository }}' --title "${{ steps.product.outputs.title }} $v" --notes-file notes.md }
