@@ -5,6 +5,14 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
+## 0.3.1
+
+- Forza Horizon Settings on Settings, beside Recording and Analysis: Short Name, Version, UDP Port, Auto Start,
+  Processes and Modules (they were on the hidden Profiles tab).
+- Forza Horizon's UDP port is the game's usual 8000 (it was 8001; an install on 8001 moves to 8000 once).
+- Every overlay starts unticked (once, for an install that had them ticked).
+- Forza Horizon's tracks are the app's list, the same on every PC (Daisy's App 4.18.9).
+
 ## 0.3.0
 
 - Tabs in a new order: Analysis, Recording, Overlays, Settings.

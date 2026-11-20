@@ -15,8 +15,8 @@ releases. The installer isn't code-signed yet, so Windows may warn that it isn't
 |---|---|
 | **Analysis** | SimEffects → Analysis: the car, tyres and race, every lap kept by track, car and class, Compare with the race video |
 | **Recording** | Video → Recording: recording with the graphics card's encoder (Analysis' race videos); no FPS overlay, benchmarks or history |
-| **Overlays** | SimEffects → Overlays: Inputs, Dash and Analysis' blocks over the game |
-| **Settings** | one page: Startup and System Tray, Updates; the ForzaLeaderBoard account (asked for on the first run), Appearance, Notifications, Language; Recording, Analysis, YouTube; Shortcuts; Files |
+| **Overlays** | SimEffects → Overlays: Inputs, Dash and Analysis' blocks over the game (each unticked at first) |
+| **Settings** | one page: Startup and System Tray, Updates; the ForzaLeaderBoard account (asked for on the first run), Appearance, Notifications, Language; Recording, Analysis, YouTube, Forza Horizon Settings (UDP port 8000…); Shortcuts; Files |
 
 Only Forza Horizon: its SimEffects profile is always the one in use; Play / Stop and its shortcut are at the top
 right. Settings live in `%APPDATA%\SimEffectsAnalysis`, apart from Daisy's App's.

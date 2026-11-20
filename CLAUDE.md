@@ -53,6 +53,9 @@ release workflow.
   Manager's Account button gone; no FPS overlay, tray items, benchmarks or history (`Hide`); Left Foot Braking on
   by default (Daisy's App too, from its next release). The user wrote "forzaleaderboards.com": the built-in
   www.forzaleaderboard.com kept.
+- **0.3.1** (asked 2026-11-19): the Profiles tab's Forza Horizon settings as the card `SimEffects/Profiles/Game`
+  ("Forza Horizon Settings", row 3's third column); port 8000 (the user: 8001 was their own, 8000 is the standard;
+  `ProductPort8000` moves it once); overlays unticked at first (`ProductUnticked`, once). Also brought 4.18.9's tracks.
 - **Decisions:** same program renamed, self-contained, modules beside it; virtual webcam left out (registered under
   Daisy's App's name and CLSID: two installs would break each other); settings `%APPDATA%\SimEffectsAnalysis`.
 - **To do / offered:** the `YOUTUBE_CLIENT` secret has to be added to this repo by the user (Daisy's App's has it; I
