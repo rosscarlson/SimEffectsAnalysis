@@ -58,6 +58,7 @@ release workflow.
   `ProductPort8000` moves it once); overlays unticked at first (`ProductUnticked`, once). Also brought 4.18.9's tracks.
 - **Decisions:** same program renamed, self-contained, modules beside it; virtual webcam left out (registered under
   Daisy's App's name and CLSID: two installs would break each other); settings `%APPDATA%\SimEffectsAnalysis`.
-- **To do / offered:** the `YOUTUBE_CLIENT` secret has to be added to this repo by the user (Daisy's App's has it; I
-  can't read it) or YouTube sign-in is off in builds. Offered: copying Daisy's App's laps over; code signing (Azure Trusted
+- **0.3.2** (asked 2026-11-19): YouTube's client boxes gone (Core `YouTube.OwnClientOffered`: a product with the
+  app's client uses only it); `YOUTUBE_CLIENT` set here from Daisy's App's installed exe's `YouTubeClient` metadata.
+- **Offered:** copying Daisy's App's laps over; code signing (Azure Trusted
   Signing) for the SmartScreen warning. Not tried yet: an update from an installed copy (0.2.1 → 0.3.0, through the bridge).

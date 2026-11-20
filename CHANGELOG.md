@@ -5,6 +5,10 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
+## 0.3.2
+
+- YouTube: Sign In with your Google account, no OAuth client ID or secret to fill in.
+
 ## 0.3.1
 
 - Forza Horizon Settings on Settings, beside Recording and Analysis: Short Name, Version, UDP Port, Auto Start,
