@@ -70,5 +70,8 @@ release workflow.
   forced on from the first run of it, `ShareQueue` waits for a sign-in); Settings without `SimEffects/Analysis`,
   `General=Startup+Updates+…` first row. Uploads' rows untested with real sessions (none on PLEX; the folder is
   shared with Daisy's App, so none were made).
+- **0.4.1** (asked 2026-11-20, a friend's uploads failed at once with nothing in the log): YouTube uploads logged
+  step by step in the app's log (Core `YouTube.Upload`/`Problem`/`Token`, `RaceUploads`, `RaceVideo`, `ShareQueue`,
+  Retry); a product's modules write to its one log (Core `Log.OneLog`). Daisy's App 06ab77a. Waiting for his log.
 - **Offered:** copying Daisy's App's laps over; code signing (Azure Trusted
   Signing) for the SmartScreen warning. Not tried yet: an update from an installed copy (0.2.1 → 0.3.0, through the bridge).

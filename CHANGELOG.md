@@ -5,6 +5,12 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
+## 0.4.1
+
+- The log says what each YouTube upload does: the video and its size, each step, every retry, and YouTube's whole
+  answer when it refuses; each race video saved, queued or passed over and why; a Retry, and each session shared or
+  why not. Everything goes in the one log (SimEffects' and Video's lines too, marked [SimEffects] and [Video]).
+
 ## 0.4.0
 
 - Analysis: the sessions are looked at on ForzaLeaderBoard's website now, so the tab is only Race Videos (Record
