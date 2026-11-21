@@ -5,6 +5,19 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
+## 0.4.0
+
+- Analysis: the sessions are looked at on ForzaLeaderBoard's website now, so the tab is only Race Videos (Record
+  each race, Upload to YouTube and who can watch it, Keep the video file, Delete Incomplete Race; YouTube is needed
+  for a race to be verified), the ForzaLeaderBoard account (Sign In, Open the website) and Uploads: the latest
+  sessions, each one's upload and YouTube video, a right-click to retry one that failed.
+- Every session goes to ForzaLeaderBoard by itself while signed in (from this version on; an older one: right-click,
+  Upload).
+- Settings: Accounts and General first; Startup and Updates are in General. Analysis' settings are gone (the website
+  works them out).
+- Forza Horizon Settings: Version's box as wide as its names; every process listed, a bullet each, no scrolling.
+- Recording: the quality's line under its box right-aligned.
+
 ## 0.3.3
 
 - Recording: Only the game's sound (on): Forza Horizon's sound without voice chat, videos or other programs.

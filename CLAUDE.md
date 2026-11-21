@@ -65,5 +65,10 @@ release workflow.
   SimEffects' profile, `GamingSettings.ProductGame`), `Hide` Performance / Cameras / Notes; Settings' `Title=A+B`
   joined cards (Accounts, General); Shortcuts a card, none set (`ProductGameSet` cleared the defaults once).
   The user saw YouTube's OAuth boxes in my test screenshot: local builds have no `YOUTUBE_CLIENT`; releases do.
+- **0.4.0** (asked 2026-11-20): `Hide` `SimEffects/Analysis/Sessions` (Analysis' `UploadsView`: Race Videos, the
+  account, Uploads with right-click Retry; `SessionsView` still made, not shown, to list and share; `SessionShares.Auto`
+  forced on from the first run of it, `ShareQueue` waits for a sign-in); Settings without `SimEffects/Analysis`,
+  `General=Startup+Updates+…` first row. Uploads' rows untested with real sessions (none on PLEX; the folder is
+  shared with Daisy's App, so none were made).
 - **Offered:** copying Daisy's App's laps over; code signing (Azure Trusted
   Signing) for the SmartScreen warning. Not tried yet: an update from an installed copy (0.2.1 → 0.3.0, through the bridge).
