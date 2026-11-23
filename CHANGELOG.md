@@ -5,6 +5,13 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
+## 0.4.2
+
+- Only whole races are sent to ForzaLeaderBoard: never one still being driven (paused over a minute, or the game
+  closed mid-race), never one left before its finish. One sent and then left is taken off the server. The first race
+  on a track, quit, counts as left, and closing the app during a race ends it. Each one sent says whether its finish
+  was seen.
+
 ## 0.4.1
 
 - The log says what each YouTube upload does: the video and its size, each step, every retry, and YouTube's whole
