@@ -72,7 +72,8 @@ release workflow.
   shared with Daisy's App, so none were made).
 - **0.4.1** (asked 2026-11-20, a friend's uploads failed at once with nothing in the log): YouTube uploads logged
   step by step in the app's log (Core `YouTube.Upload`/`Problem`/`Token`, `RaceUploads`, `RaceVideo`, `ShareQueue`,
-  Retry); a product's modules write to its one log (Core `Log.OneLog`). Daisy's App 06ab77a. Waiting for his log.
+  Retry); a product's modules write to its one log (Core `Log.OneLog`). Daisy's App 06ab77a. Closed 2026-11-23:
+  YouTube uploads work (the user).
 - **0.4.2** (asked 2026-11-23): Daisy's App 4.20.2 (971a45b): only whole races shared (cancelled or left ones not
   sent; one shared then left is taken off). Built and looked at: same layout (4.20.0's Recordings not shown).
 - **Offered:** copying Daisy's App's laps over; code signing (Azure Trusted
