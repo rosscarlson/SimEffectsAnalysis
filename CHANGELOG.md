@@ -5,6 +5,21 @@ from Daisy's App's source at the commit in `daisysapp.ref`. Changes not released
 the version when it's released. 0.2.0 and 0.2.1 were released from Daisy's App's repository (tags `sea-v0.2.0`,
 `sea-v0.2.1`).
 
+## 0.5.0
+
+- Race times match the game's results screen to the millisecond (sprints and a circuit's last lap were up to 0.17 s
+  short); laps and races already kept are mended from their logs.
+- Forza Horizon 6 tracks recognised and named right: races started away from the event's marker, events picked from
+  the map, tracks sharing a grid told apart by their laps, and many track starts, lengths and names corrected. Races
+  kept under a wrong track are moved onto the right one.
+- A Forza Horizon race isn't thrown away when its run is a little longer or shorter than learnt, and one restarted or
+  quit partway isn't kept as finished; one ending on the results screen is kept.
+- A race left before its finish with a whole lap is kept and shared as not finished, with its whole laps' times;
+  Delete Incomplete Race deletes only one with no whole lap. A race not kept keeps its race log and video.
+- YouTube uploads wait when YouTube won't take more (the channel's upload limit or the day's quota), with an amber
+  bubble and a notification, and are tried again each hour.
+- Recording: Record overlays (Settings, Recording; on to start): off, the app's overlays are left out of recordings.
+
 ## 0.4.2
 
 - Only whole races are sent to ForzaLeaderBoard: never one still being driven (paused over a minute, or the game

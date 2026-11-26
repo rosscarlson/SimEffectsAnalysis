@@ -76,5 +76,7 @@ release workflow.
   YouTube uploads work (the user).
 - **0.4.2** (asked 2026-11-23): Daisy's App 4.20.2 (971a45b): only whole races shared (cancelled or left ones not
   sent; one shared then left is taken off). Built and looked at: same layout (4.20.0's Recordings not shown).
+- **0.5.0** (asked 2026-11-25): Daisy's App 4.21.15 (40c67c9): track ids and FH6 tracks (4.21.3–4.21.15), exact
+  race times (4.21.2, 4.21.10), YouTube upload limits (4.20.3), Record overlays (4.21.11). Built and looked at: same layout.
 - **Offered:** copying Daisy's App's laps over; code signing (Azure Trusted
   Signing) for the SmartScreen warning. Not tried yet: an update from an installed copy (0.2.1 → 0.3.0, through the bridge).
